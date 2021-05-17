@@ -1,0 +1,31 @@
+INFO:     conversions.hpp(convert_if_notexists:767): Did not find preprocessed shards for ./bin/example_apps/amazon0601.txt
+INFO:     conversions.hpp(convert_if_notexists:768): (Edge-value size: 4)
+INFO:     conversions.hpp(convert_if_notexists:769): Will try create them now...
+Please enter value for command-line argument [filetype]
+  (Options are: edgelist, adjlist, binedgelist, metis)
+edgelist
+INFO:     sharder.hpp(start_preprocessing:370): Starting preprocessing, shovel size: 17476266
+INFO:     conversions.hpp(convert_edgelist:221): Reading in edge list format!
+INFO:     sharder.hpp(flush:191): Sorting shovel: ./bin/example_apps/amazon0601.txt4.0.shovel, max:403393
+INFO:     sharder.hpp(flush:193): Sort done../bin/example_apps/amazon0601.txt4.0.shovel
+INFO:     sharder.hpp(flush_shovel:401): Waiting shoveling threads...
+INFO:     sharder.hpp(determine_number_of_shards:564): Determining number of shards automatically.
+INFO:     sharder.hpp(determine_number_of_shards:567): Assuming available memory is 800 megabytes. 
+INFO:     sharder.hpp(determine_number_of_shards:568):  (This can be defined with configuration parameter 'membudget_mb')
+INFO:     sharder.hpp(determine_number_of_shards:573): Determining maximum shard size: 100 MB.
+INFO:     sharder.hpp(determine_number_of_shards:586): Number of shards to be created: 1
+INFO:     sharder.hpp(write_shards:967): Edges per shard: 3387389 nshards=1 total: 3387388
+INFO:     sharder.hpp(write_shards:973): Buffer size in merge phase: 419430408
+INFO:     sharder.hpp(finish_shard:625): Starting final processing for shard: 0
+DEBUG:    sharder.hpp(finish_shard:636): Shovel size:40648656 edges: 3387388
+DEBUG:    sharder.hpp(finish_shard:702): 0 / 3387388
+INFO:     sharder.hpp(createnextshard:887): Remaining edges: 0 remaining shards:0 edges per shard=3387389
+INFO:     sharder.hpp(createnextshard:890): Edges per shard: 3387389
+
+ === REPORT FOR sharder() ===
+[Timings]
+edata_flush:		0.007255s	 (count: 13, min: 0.000523s, max: 0.000599, avg: 0.000558077s)
+execute_sharding:		0.216857 s
+finish_shard.sort:		0.085023 s
+preprocessing:		0.34272 s
+shard_final:		0.145889 s

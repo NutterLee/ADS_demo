@@ -1,0 +1,67 @@
+Please enter value for command-line argument [filetype]
+  (Options are: edgelist, adjlist, binedgelist, metis)
+
+ === REPORT FOR sharder() ===
+[Timings]
+edata_flush:		3.27114s	 (count: 5612, min: 0.000391s, max: 0.003946, avg: 0.000582883s)
+execute_sharding:		169.203 s
+finish_shard.sort:		60.6613s	 (count: 23, min: 2.19284s, max: 3.00479, avg: 2.63745s)
+preprocessing:		163.845 s
+shard_final:		105.892s	 (count: 23, min: 4.12729s, max: 5.60916, avg: 4.604s)
+[Other]
+app:	sharder
+
+ === REPORT FOR pagerank() ===
+[Numeric]
+cachesize_mb:		1000
+compression:		0
+execthreads:		8
+loadthreads:		4
+membudget_mb:		2000
+niothreads:		2
+niters:		4
+nshards:		23
+nvertices:		6.15784e+07
+scheduler:		0
+serialized-updates:		2.46314e+08	(count: 96, min: 1.26877e+06, max: 6.99051e+06, avg: 2.56577e+06)
+stripesize:		1.07374e+09
+updates:		2.46314e+08
+work:		1.17469e+10
+[Timings]
+blockload:		5.3522s	 (count: 22356, min: 2e-06s, max: 0.004168, avg: 0.000239408s)
+commit:		0.061691s	 (count: 1716, min: 0s, max: 0.000653, avg: 3.59505e-05s)
+execute-updates:		4.89208s	 (count: 96, min: 0.023704s, max: 0.127273, avg: 0.0509592s)
+iomgr_init:		0.000248 s
+memoryshard_create_edges:		234.371s	 (count: 192, min: 0.0276s, max: 3.65582, avg: 1.22068s)
+memshard_commit:		1.00459s	 (count: 92, min: 2e-05s, max: 0.033429, avg: 0.0109195s)
+preada_now:		30.0211s	 (count: 41436, min: 2e-06s, max: 0.042603, avg: 0.000724518s)
+pwritea_now:		9.03601s	 (count: 19712, min: 0.000189s, max: 0.018671, avg: 0.000458401s)
+read_next_vertices:		96.1033s	 (count: 2112, min: 0.011642s, max: 0.15156, avg: 0.0455035s)
+runtime:		279.65 s
+stripedio_wait_for_reads:		0.000148s	 (count: 96, min: 0s, max: 7e-06, avg: 1.54167e-06s)
+stripedio_wait_for_writes:		6.5e-05s	 (count: 97, min: 0s, max: 1.4e-05, avg: 6.70103e-07s)
+[Other]
+app:	pagerank
+engine:	functional
+file:	/mnt/xstream_NVMe/twitter_rv.net
+Print top 20 vertices: 
+1. 31567254	6083.33
+2. 813286	5188.85
+3. 15131310	2880.09
+4. 14224719	2618.15
+5. 16409683	2349.62
+6. 14075928	2312.45
+7. 7040932	1849.5
+8. 5380672	1470.07
+9. 17850012	1385.42
+10. 12687952	1333.27
+11. 14230524	1205.55
+12. 20385404	1201.06
+13. 5210841	1178.32
+14. 12589972	1175.3
+15. 16569530	1146.77
+16. 14389132	1144.27
+17. 11915432	1137.33
+18. 16559157	1099.24
+19. 14079425	1095.19
+20. 14669398	1086.31

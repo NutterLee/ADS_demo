@@ -1,0 +1,110 @@
+INFO:     pagerank_functional.cpp(main:98): Running pagerank in semi-synchronous mode.
+INFO:     chifilenames.hpp(find_shards:265): Detected number of shards: 1
+INFO:     chifilenames.hpp(find_shards:266): To specify a different number of shards, use command-line parameter 'nshards'
+INFO:     conversions.hpp(convert_if_notexists:758): Found preprocessed files for ./bin/example_apps/amazon0601.txt, num shards=1
+DEBUG:    stripedio.hpp(stripedio:271): Start io-manager with 2 threads.
+INFO:     graphchi_engine.hpp(graphchi_engine:154): Initializing graphchi_engine. This engine expects 4-byte edge data. 
+INFO:     chifilenames.hpp(load_vertex_intervals:400): shard: 0 - 403393
+INFO:     graphchi_engine.hpp(run:732): Set maxwindow:6990506
+INFO:     graphchi_engine.hpp(run:744): GraphChi starting
+INFO:     graphchi_engine.hpp(run:745): Licensed under the Apache License 2.0
+INFO:     graphchi_engine.hpp(run:746): Copyright Aapo Kyrola et al., Carnegie Mellon University (2012)
+DEBUG:    slidingshard.hpp(sliding_shard:213): Total edge data size: 13549552, ./bin/example_apps/amazon0601.txt.edata.e4B.0_1sizeof(ET): 4
+INFO:     graphchi_engine.hpp(print_config:132): Engine configuration: 
+INFO:     graphchi_engine.hpp(print_config:133):  exec_threads = 8
+INFO:     graphchi_engine.hpp(print_config:134):  load_threads = 4
+INFO:     graphchi_engine.hpp(print_config:135):  membudget_mb = 2000
+INFO:     graphchi_engine.hpp(print_config:136):  blocksize = 1048576
+INFO:     graphchi_engine.hpp(print_config:137):  scheduler = 0
+INFO:     graphchi_engine.hpp(run:780): Start iteration: 0
+INFO:     graphchi_engine.hpp(run:859): 0.000737s: Starting: 0 -- 403393
+INFO:     graphchi_engine.hpp(run:872): Iteration 0/3, subinterval: 0 - 403393
+DEBUG:    graphchi_engine.hpp(run:887): Allocation 403394 vertices, sizeof:64 total:25817216
+DEBUG:    functional_engine.hpp(load_before_updates:51): Processing in-edges.
+DEBUG:    memoryshard.hpp(load_edata:327): Compressed/full size: 1 number of blocks: 13
+INFO:     graphchi_engine.hpp(run:896): Start updates
+DEBUG:    functional_engine.hpp(load_after_updates:107): Processing out-edges (broadcast).
+INFO:     graphchi_engine.hpp(run:906): Finished updates
+DEBUG:    stripedio.hpp(consider_caching:189): Cache size: 1048576 / 1048576000
+INFO:     graphchi_engine.hpp(run:780): Start iteration: 1
+INFO:     graphchi_engine.hpp(run:859): 0.200847s: Starting: 0 -- 403393
+INFO:     graphchi_engine.hpp(run:872): Iteration 1/3, subinterval: 0 - 403393
+DEBUG:    graphchi_engine.hpp(run:887): Allocation 403394 vertices, sizeof:64 total:25817216
+DEBUG:    functional_engine.hpp(load_before_updates:51): Processing in-edges.
+DEBUG:    memoryshard.hpp(load_edata:327): Compressed/full size: 1 number of blocks: 13
+INFO:     graphchi_engine.hpp(run:896): Start updates
+DEBUG:    functional_engine.hpp(load_after_updates:107): Processing out-edges (broadcast).
+INFO:     graphchi_engine.hpp(run:906): Finished updates
+INFO:     graphchi_engine.hpp(run:780): Start iteration: 2
+INFO:     graphchi_engine.hpp(run:859): 0.39798s: Starting: 0 -- 403393
+INFO:     graphchi_engine.hpp(run:872): Iteration 2/3, subinterval: 0 - 403393
+DEBUG:    graphchi_engine.hpp(run:887): Allocation 403394 vertices, sizeof:64 total:25817216
+DEBUG:    functional_engine.hpp(load_before_updates:51): Processing in-edges.
+DEBUG:    memoryshard.hpp(load_edata:327): Compressed/full size: 1 number of blocks: 13
+INFO:     graphchi_engine.hpp(run:896): Start updates
+DEBUG:    functional_engine.hpp(load_after_updates:107): Processing out-edges (broadcast).
+INFO:     graphchi_engine.hpp(run:906): Finished updates
+INFO:     graphchi_engine.hpp(run:780): Start iteration: 3
+INFO:     graphchi_engine.hpp(run:859): 0.583314s: Starting: 0 -- 403393
+INFO:     graphchi_engine.hpp(run:872): Iteration 3/3, subinterval: 0 - 403393
+DEBUG:    graphchi_engine.hpp(run:887): Allocation 403394 vertices, sizeof:64 total:25817216
+DEBUG:    functional_engine.hpp(load_before_updates:51): Processing in-edges.
+DEBUG:    memoryshard.hpp(load_edata:327): Compressed/full size: 1 number of blocks: 13
+INFO:     graphchi_engine.hpp(run:896): Start updates
+DEBUG:    functional_engine.hpp(load_after_updates:107): Processing out-edges (broadcast).
+INFO:     graphchi_engine.hpp(run:906): Finished updates
+INFO:     stripedio.hpp(~block_cache:170): Cache stats: hits=39 misses=13
+INFO:     stripedio.hpp(~block_cache:171):  -- in total had 12 MB in cache.
+
+ === REPORT FOR pagerank() ===
+[Numeric]
+cachesize_mb:		1000
+compression:		0
+execthreads:		8
+loadthreads:		4
+membudget_mb:		2000
+niothreads:		2
+niters:		4
+nshards:		1
+nvertices:		403394
+scheduler:		0
+serialized-updates:		1.61358e+06	(count: 4, min: 403394, max: 403394, avg: 403394)
+stripesize:		1.07374e+09
+updates:		1.61358e+06
+work:		2.70991e+07
+[Timings]
+execute-updates:		0.031819s	 (count: 4, min: 0.005807s, max: 0.009322, avg: 0.00795475s)
+iomgr_init:		0.000195 s
+memoryshard_create_edges:		0.571915s	 (count: 8, min: 0.022861s, max: 0.1375, avg: 0.0714894s)
+memshard_commit:		0.00015s	 (count: 4, min: 3e-06s, max: 0.000139, avg: 3.75e-05s)
+preada_now:		0.040743s	 (count: 12, min: 0.000504s, max: 0.012489, avg: 0.00339525s)
+pwritea_now:		0.01125s	 (count: 17, min: 0.000585s, max: 0.001005, avg: 0.000661765s)
+runtime:		0.719713 s
+stripedio_wait_for_reads:		2e-06s	 (count: 4, min: 0s, max: 1e-06, avg: 5e-07s)
+stripedio_wait_for_writes:		1e-06s	 (count: 9, min: 0s, max: 1e-06, avg: 1.11111e-07s)
+[Other]
+app:	pagerank
+engine:	functional
+file:	./bin/example_apps/amazon0601.txt
+DEBUG:    stripedio.hpp(stripedio:271): Start io-manager with 2 threads.
+Print top 20 vertices: 
+1. 45	271.578
+2. 50	262.153
+3. 1037	212.628
+4. 1036	211.351
+5. 1039	182.351
+6. 1041	177.963
+7. 529	164.955
+8. 1042	162.852
+9. 52	136.288
+10. 1615	132.581
+11. 1616	131.409
+12. 49	130.785
+13. 105	127.058
+14. 600	124.811
+15. 44	121.611
+16. 5	110.868
+17. 599	109.23
+18. 1618	108.103
+19. 605	106.707
+20. 1038	101.685

@@ -1,0 +1,55 @@
+
+ === REPORT FOR pagerank() ===
+[Numeric]
+cachesize_mb:		1000
+compression:		0
+execthreads:		8
+loadthreads:		4
+membudget_mb:		2000
+niothreads:		2
+niters:		5
+nshards:		23
+nvertices:		6.15784e+07
+scheduler:		0
+serialized-updates:		3.07892e+08	(count: 120, min: 1.26877e+06, max: 6.99051e+06, avg: 2.56577e+06)
+stripesize:		1.07374e+09
+updates:		3.07892e+08
+work:		1.46836e+10
+[Timings]
+blockload:		271.277s	 (count: 27945, min: 2e-06s, max: 1.74823, avg: 0.00970754s)
+commit:		0.071417s	 (count: 2145, min: 0s, max: 0.000892, avg: 3.32946e-05s)
+execute-updates:		6.00728s	 (count: 120, min: 0.023209s, max: 0.176788, avg: 0.0500606s)
+iomgr_init:		0.00017 s
+memoryshard_create_edges:		329.136s	 (count: 240, min: 0.026899s, max: 4.49016, avg: 1.3714s)
+memshard_commit:		1.3984s	 (count: 115, min: 5.6e-05s, max: 0.03168, avg: 0.01216s)
+preada_now:		578.151s	 (count: 51606, min: 2e-06s, max: 2.19976, avg: 0.0112032s)
+pwritea_now:		13.4449s	 (count: 24390, min: 0.000172s, max: 0.686815, avg: 0.000551244s)
+read_next_vertices:		661.076s	 (count: 2640, min: 0.011094s, max: 5.52213, avg: 0.250408s)
+runtime:		546.88 s
+stripedio_wait_for_reads:		0.000162s	 (count: 120, min: 0s, max: 4e-06, avg: 1.35e-06s)
+stripedio_wait_for_writes:		5.8e-05s	 (count: 121, min: 0s, max: 2e-06, avg: 4.79339e-07s)
+[Other]
+app:	pagerank
+engine:	functional
+file:	/home/lhd/github/x-stream/test/twitter_rv.net
+Print top 20 vertices: 
+1. 813286	3074
+2. 15131310	1676.11
+3. 14224719	1537.4
+4. 14075928	1328.92
+5. 16409683	1328.8
+6. 17850012	1248.84
+7. 7040932	1212.56
+8. 5210841	1122.37
+9. 11915432	1103.43
+10. 20385404	1096.11
+11. 14389132	1088.14
+12. 12589972	1081.95
+13. 14669398	1047.28
+14. 16569530	1043.92
+15. 14079425	1026.05
+16. 14430060	1020.52
+17. 15021099	979.984
+18. 16559157	978.084
+19. 21836409	966.149
+20. 15117375	961.515
